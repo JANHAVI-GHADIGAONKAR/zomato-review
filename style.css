@@ -1,0 +1,267 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #fff;
+    
+    margin-top: 20px;
+}
+.line{
+    border-bottom: 1px solid #ddd;
+}
+.logo{
+    margin: auto;
+}
+.header-left {
+    display: flex;
+    align-items: center;
+    flex-grow: 0.5;
+    justify-content: space-between;
+}
+
+.header-left img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.header-left input {
+    padding: 5px;
+    width: 300px;
+}
+
+.header-right a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+nav {
+    padding: 10px 20px;
+    background: #eee;
+}
+
+nav a {
+    color: #000;
+    text-decoration: none;
+    margin-right: 5px;
+    font-size: 13px;
+}
+.active{
+    color: #555;
+}
+.search-container{
+    /* width: 296px; */
+    display: block;
+    margin: 0 auto;
+    height: 50px;
+  }
+  
+  
+  input#search-bar{
+    margin: 0 auto;
+    width: 100%;
+    height: 45px;
+    padding: 0 20px;
+    font-size: 1rem;
+    border: 1px solid #D0CFCE;
+    box-shadow: rgba(28, 28, 28, 0.08) 0px 2px 8px;
+    border: 1px solid rgb(232, 232, 232);
+    transition: border 0.35s ease, color 0.35s ease;
+    outline: none;
+    border-radius: 20px;
+    text-overflow: ellipsis;
+    &:focus{
+      border: 1px solid #008ABF;
+      transition: 0.35s ease;
+      color: #008ABF;
+      &::-webkit-input-placeholder{
+        transition: opacity 0.45s ease; 
+          opacity: 0;
+       }
+      &::-moz-placeholder {
+        transition: opacity 0.45s ease; 
+          opacity: 0;
+       }
+      &:-ms-placeholder {
+       transition: opacity 0.45s ease; 
+         opacity: 0;
+       }    
+     }
+   }
+  .search{
+    width: 100%;
+  }
+  .search-icon{
+    position: absolute;
+    width: 70px;
+    height: 70px !important;
+    padding-bottom: 23px;
+    padding-right: 23px;
+  }
+  #search-bar::placeholder{
+    padding-left: 20px;
+  }
+
+
+nav{
+    background-color: white;
+}
+/* .restaurant-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+} */
+.restaurant-details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.restaurant-images {
+    width: 100%;
+    max-width: 60%;
+}
+
+.gallery {
+    display: flex;
+}
+
+.main-image {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.row-one {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gallery-view {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.thumbnail-images img {
+    width: 100%;
+    height: auto;
+
+}
+
+.gallery-view {
+    position: relative;
+}
+
+.gallery-view img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery-view span {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+
+
+@media (max-width: 480px) {
+    .thumbnail-images img {
+        width: 100%;
+    }
+}
+
+
+
+.ratings {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.reviews {
+    margin-top: 20px;
+}
+
+.review-form input, .review-form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.review {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.review h3 {
+    margin: 0 0 10px;
+}
+
+.review p {
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .restaurant-images, .restaurant-details {
+        width: 100%;
+    }
+
+    .thumbnail-images img {
+        width: 48%;
+        margin-right: 2%;
+    }
+}
+
+@media (max-width: 480px) {
+    header, nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-left, .header-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .thumbnail-images img {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .search-container{
+        width: 490px;
+    }
+    input#search-bar{
+        border-radius: 5px;
+    }
+    .logo{
+        margin: 0px !important;
+    }
+   .thumbnail-images{
+    gap: 10px;
+   } 
+  }
